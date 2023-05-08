@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
 
 function Product() {
 
   const[state, setState] = useState([])
   const[value, setValue] = useState(1)
   
+  let [pageparam, setPageeparam] = useSearchParams()
 
   useEffect(() => {
     
@@ -20,6 +22,11 @@ function Product() {
     console.log(data);
     setState(data);
    }
+
+   useEffect(() => {
+    let paramobject = {value} 
+    setPageeparam(paramobject);
+   }, [value])
    
     return(
       
