@@ -31,7 +31,8 @@ function Counter () {
                 dispatch({
                     type: "-decrease"
                 })
-            }}>Decrease</button>&nbsp;&nbsp;&nbsp;
+
+            }} disabled={state.count===0}>Decrease</button>&nbsp;&nbsp;&nbsp;
             <button onClick={() => {
                 dispatch({
                     type: "0reset"
