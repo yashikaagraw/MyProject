@@ -39,7 +39,7 @@ const handlechange = (p) => {
     console.log(currentpages)
  return(
   <div>
-     <h1>Yashika's Store</h1>
+     
      <Pagenation totalpages= {totalpages} currentpages={currentpages} handlechange={handlechange}/> 
      <div style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr"}}>
     {
